@@ -3,5 +3,11 @@
   "extends": "eslint-config-riot",
   "rules": {
     "comma-dangle": ["error", "always-multiline"]
+  },
+  "plugins": [
+    "html"
+  ],
+  "settings": {
+    "html/html-extensions": [".riot"]
   }
 }
