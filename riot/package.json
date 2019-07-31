@@ -2,7 +2,9 @@
   "private": true,
   "scripts": {
     "serve": "webpack-dev-server --inline --watch --colors -d --port 1234",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "pretest": "npm run build",
+    "test": "node -r esm test/index.js"
   },
   "dependencies": {
     "riot": "^4.3.5"
@@ -14,6 +16,9 @@
     "eslint": "^6.1.0",
     "eslint-config-riot": "^2.0.0",
     "eslint-plugin-html": "^6.0.0",
+    "esm": "^3.2.25",
+    "jasmine": "^3.4.0",
+    "jsdom": "^15.1.1",
     "node-sass": "^4.12.0",
     "typescript": "^3.5.3",
     "webpack": "^4.37.0",
