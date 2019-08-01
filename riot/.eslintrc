@@ -1,6 +1,9 @@
 {
   "parser": "babel-eslint",
   "extends": "eslint-config-riot",
+  "env": {
+    "jasmine": true
+  },
   "rules": {
     "comma-dangle": ["error", "always-multiline"]
   },
