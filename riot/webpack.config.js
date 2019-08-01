@@ -1,7 +1,6 @@
 const path = require('path')
 const { registerPreprocessor } = require('@riotjs/compiler')
 const sass = require('node-sass')
-const ts = require('typescript')
 
 registerPreprocessor('css', 'sass', function(code, { options }) {
   const { file } = options
@@ -14,23 +13,6 @@ registerPreprocessor('css', 'sass', function(code, { options }) {
 
   return {
     code: css.css.toString(),
-    map: null,
-  }
-})
-
-
-registerPreprocessor('javascript', 'ts', function(code, { options }) {
-  const { file } = options
-
-  const result = ts.transpileModule(code, {
-    fileName: file,
-    compilerOptions: {
-      module: ts.ModuleKind.ESNext,
-    },
-  })
-
-  return {
-    code: result.outputText,
     map: null,
   }
 })
