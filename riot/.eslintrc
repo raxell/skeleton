@@ -5,7 +5,8 @@
     "jasmine": true
   },
   "rules": {
-    "comma-dangle": ["error", "always-multiline"]
+    "comma-dangle": ["error", "always-multiline"],
+    "valid-jsdoc": "off"
   },
   "plugins": [
     "html"
